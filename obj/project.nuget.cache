@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "uT0OfgCgjgZQuPVkDvkreO2ZOejKWHhwqSz4Gl+y/RjyXNlsaluu6V+eEKMHQXeDPaurcTtqk73mTbmHIcoD8w==",
+  "dgSpecHash": "LakhuH5HW42sskX3KMMpfB0hli+wQhNy9pZKTpGakbGrYP8IJ1U3UzeRQzKZx8vDbEZT2JvRwBQb/Xpj/Pl8zQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\dasex\\OneDrive\\Documents\\Alura\\C#\\movie-api\\movie-api\\movie-api.csproj",
+  "projectFilePath": "C:\\Users\\dasex\\OneDrive\\Documents\\Alura\\C#\\movie-api\\movie-api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dasex\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\dasex\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
