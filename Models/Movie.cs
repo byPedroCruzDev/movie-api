@@ -5,6 +5,10 @@ namespace movie_api.Models;
 
 public class Movie
 {
+
+    public int Id { get; set; }
+
+
     [Required(ErrorMessage = "Title is required")]
     [MinLength(1)]
     public string Title { get; set; }
