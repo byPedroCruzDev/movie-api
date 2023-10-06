@@ -6,14 +6,15 @@ namespace movie_api.Models;
 public class Movie
 {
     [Required(ErrorMessage = "Title is required")]
+    [MinLength(1)]
     public string Title { get; set; }
 
-    [Required(ErrorMessage = "Description is required"))]
-    [MinLength(15, ErrorMessage = "Minimal descriptio is 15 characters")]
+    [Required(ErrorMessage = "Description is required")]
+    [MaxLength(800, ErrorMessage = "Minimal descriptio is 15 characters")]
     public string Description { get; set; }
 
     [Required]
-    [MaxLength(60, ErrorMessage = "Exceed the number of characters")]
+    [StringLength(60, ErrorMessage = "Exceed the number of characters")]
     public string Gender { get; set; }
 
     [Required]

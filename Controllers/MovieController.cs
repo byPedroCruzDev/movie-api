@@ -9,6 +9,7 @@ public class MovieController : ControllerBase
 {
     private static List<Movie> movie = new List<Movie>();
 
+    [HttpPost]
     public void AddMovie([FromBody] Movie movies)
     {
         movie.Add(movies);
@@ -19,4 +20,10 @@ public class MovieController : ControllerBase
         Console.WriteLine(movies.Gender);
     }
 
+    [HttpGet] 
+    public IEnumerable<Movie> GetMovies() 
+    {
+        return movie;
+    }
+    
 }
