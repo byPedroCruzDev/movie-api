@@ -442,11 +442,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dasex\\OneDrive\\Documents\\Alura\\C#\\web-api\\movie-api\\movie-api.csproj",
+      "projectUniqueName": "C:\\Users\\dasex\\OneDrive\\Documents\\Alura\\C#\\movie-api\\movie-api\\movie-api.csproj",
       "projectName": "movie-api",
-      "projectPath": "C:\\Users\\dasex\\OneDrive\\Documents\\Alura\\C#\\web-api\\movie-api\\movie-api.csproj",
+      "projectPath": "C:\\Users\\dasex\\OneDrive\\Documents\\Alura\\C#\\movie-api\\movie-api\\movie-api.csproj",
       "packagesPath": "C:\\Users\\dasex\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dasex\\OneDrive\\Documents\\Alura\\C#\\web-api\\movie-api\\obj\\",
+      "outputPath": "C:\\Users\\dasex\\OneDrive\\Documents\\Alura\\C#\\movie-api\\movie-api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\dasex\\AppData\\Roaming\\NuGet\\NuGet.Config",
