@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using movie_api.Models;
 
 namespace movie_api.Controllers;
@@ -24,9 +24,9 @@ public class MovieController : ControllerBase
     }
 
     [HttpGet]
-    public IEnumerable<Movie> GetMovies()
+    public IEnumerable<Movie> GetMovies([FromQuery] int skip = 0, [FromQuery] int take = 20 )
     {
-        return movie;
+        return movie.Skip(skip).Take(take);
     }
 
     [HttpGet("{id}")]
