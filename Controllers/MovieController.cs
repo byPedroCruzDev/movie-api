@@ -11,16 +11,12 @@ public class MovieController : ControllerBase
     private static int id = 0;
 
     [HttpPost]
-    public void AddMovie([FromBody] Movie movies)
+    public IActionResult CreateMovie([FromBody] Movie movies)
     {
         movies.Id = id++;
         movie.Add(movies);
-        Console.WriteLine(movies.Id);
-
-        Console.WriteLine(movies.Min);
-        Console.WriteLine(movies.Title);
-        Console.WriteLine(movies.Description);
-        Console.WriteLine(movies.Gender);
+        return CreateAtAction(nameof(GetMoviesWithId), 
+                            new (id == movies.Id), movie)
     }
 
     [HttpGet]
@@ -30,9 +26,11 @@ public class MovieController : ControllerBase
     }
 
     [HttpGet("{id}")]
-    public Movie? GetMoviesWithId(int id)
+    public IsActionResult GetMovieWithId(int id)
     {
-       return movie.FirstOrDefault(movie => movie.Id == id);
+      var movies = movie.FirstOrDefault(movie => movie.Id == id);
+      if(movies == null) return NotFound();
+      return Ok(); 
 
         
     }
