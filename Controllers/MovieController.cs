@@ -1,4 +1,7 @@
+using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
+using movie_api.Data;
+using movie_api.Data.Dto;
 using movie_api.Models;
 
 namespace movie_api.Controllers;
@@ -7,31 +10,38 @@ namespace movie_api.Controllers;
 [Route("[controller]")]
 public class MovieController : ControllerBase
 {
-    private static List<Movie> movie = new List<Movie>();
-    private static int id = 0;
+    private MovieContext _context;
+    private IMapper _mapper;
+    public MovieController(MovieContext context, IMapper mapper)
+    {
+        _context = context;
+        _mapper = mapper;
+    }
 
     [HttpPost]
-    public IActionResult CreateMovie([FromBody] Movie movies)
+    public IActionResult CreateMovie([FromBody] 
+                                    CreateMovieDto moviesDto)
     {
-        movies.Id = id++;
-        movie.Add(movies);
-        return CreateAtAction(nameof(GetMoviesWithId), 
-                            new (id == movies.Id), movie)
+        Movie movie = _mapper.Map<Movie>(moviesDto);
+        _context.Movies.Add(movie);
+        _context.SaveChanges();
+        return CreatedAtAction(nameof(GetWithId),
+                            new { id = movie.Id }, movie);
     }
 
     [HttpGet]
     public IEnumerable<Movie> GetMovies([FromQuery] int skip = 0, [FromQuery] int take = 20 )
     {
-        return movie.Skip(skip).Take(take);
+        return _context.Movies.Skip(skip).Take(take);
     }
 
     [HttpGet("{id}")]
-    public IsActionResult GetMovieWithId(int id)
+    public IActionResult GetWithId(int id)
     {
-      var movies = movie.FirstOrDefault(movie => movie.Id == id);
-      if(movies == null) return NotFound();
-      return Ok(); 
+        var movies = _context.Movies.FirstOrDefault(movie => movie.Id == id);
+        if (movies == null) return NotFound();
+        return Ok(movies);
 
-        
+
     }
 }
