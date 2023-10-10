@@ -62,3 +62,17 @@ C:\Users\dasex\OneDrive\Documents\Alura\C#\movie-api\obj\Debug\net6.0\refint\mov
 C:\Users\dasex\OneDrive\Documents\Alura\C#\movie-api\obj\Debug\net6.0\movie-api.pdb
 C:\Users\dasex\OneDrive\Documents\Alura\C#\movie-api\obj\Debug\net6.0\movie-api.genruntimeconfig.cache
 C:\Users\dasex\OneDrive\Documents\Alura\C#\movie-api\obj\Debug\net6.0\ref\movie-api.dll
+C:\Users\dasex\OneDrive\Documents\Alura\C#\movie-api\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\dasex\OneDrive\Documents\Alura\C#\movie-api\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\dasex\OneDrive\Documents\Alura\C#\movie-api\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.InMemory.dll
+C:\Users\dasex\OneDrive\Documents\Alura\C#\movie-api\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\dasex\OneDrive\Documents\Alura\C#\movie-api\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\dasex\OneDrive\Documents\Alura\C#\movie-api\bin\Debug\net6.0\Humanizer.dll
+C:\Users\dasex\OneDrive\Documents\Alura\C#\movie-api\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\dasex\OneDrive\Documents\Alura\C#\movie-api\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\dasex\OneDrive\Documents\Alura\C#\movie-api\bin\Debug\net6.0\MySqlConnector.dll
+C:\Users\dasex\OneDrive\Documents\Alura\C#\movie-api\bin\Debug\net6.0\Npgsql.dll
+C:\Users\dasex\OneDrive\Documents\Alura\C#\movie-api\bin\Debug\net6.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Users\dasex\OneDrive\Documents\Alura\C#\movie-api\bin\Debug\net6.0\Pomelo.EntityFrameworkCore.MySql.dll
+C:\Users\dasex\OneDrive\Documents\Alura\C#\movie-api\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\dasex\OneDrive\Documents\Alura\C#\movie-api\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
