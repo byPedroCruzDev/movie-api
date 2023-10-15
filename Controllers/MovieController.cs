@@ -31,9 +31,9 @@ public class MovieController : ControllerBase
     }
 
     [HttpGet]
-    public IEnumerable<Movie> GetMovies([FromQuery] int skip = 0, [FromQuery] int take = 20 )
+    public IEnumerable<ReadMovieDto> GetMovies([FromQuery] int skip = 0, [FromQuery] int take = 20 )
     {
-        return _context.Movies.Skip(skip).Take(take);
+        return _mapper.Map<List<ReadMovieDto>>(_context.Movies.Skip(skip).Take(take));
     }
 
     [HttpGet("{id}")]
@@ -41,7 +41,8 @@ public class MovieController : ControllerBase
     {
         var movies = _context.Movies.FirstOrDefault(movie => movie.Id == id);
         if (movies == null) return NotFound();
-        return Ok(movies);
+        var movieDto = _mapper.Map<ReadMovieDto>(movies);
+        return Ok(movieDto);
 
 
    }
@@ -78,6 +79,19 @@ public class MovieController : ControllerBase
         _mapper.Map(movieToUpdate, movie);
         _context.SaveChanges();
 
+        return NoContent();
+    }
+
+
+    [HttpDelete("{id}")]
+    public IActionResult DeleteMovie(int id)
+    {
+        var movie = _context.Movies.FirstOrDefault(
+            movie => movie.Id == id
+        );
+        if(movie == null) return NotFound();
+        _context.Remove(movie);
+        _context.SaveChanges();
         return NoContent();
     }
 }
